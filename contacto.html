@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto</title>
+  <link rel="stylesheet" href="/pagina.css">
+</head>
+<!-- Formulario emergente -->
+<div id="formulario-modal" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarFormulario()">&times;</span>
+    <h2>Suscríbete a las novedades</h2>
+    <form>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</div>
+<script>
+  function abrirFormulario() {
+    document.getElementById("formulario-modal").style.display = "block";
+  }
+
+  function cerrarFormulario() {
+    document.getElementById("formulario-modal").style.display = "none";
+  }
+
+  // Cierra el formulario si se hace clic fuera del contenido
+  window.onclick = function(event) {
+    const modal = document.getElementById("formulario-modal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="cone_ros.ico" alt="Logo" width="50">
+      <p>BAD <span class="distinto">BUNNY</span></p>
+    </div>
+    <nav class="menu">
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+      </ul>
+    </nav>
+    <div class="boton" onclick="abrirFormulario()">Suscríbete</div>
+  </header>
+
+  <main class="main">
+    <h1>Contacto</h1>
+    <p>¿Tienes alguna pregunta o sugerencia? Escríbenos a: <strong>contacto@badbunnyfans.com</strong></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Página de Libro - Bad Bunny</p>
+  </footer>
+</body>
+</html>

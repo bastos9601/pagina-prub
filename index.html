@@ -1,45 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina de libro</title>
-
+    <title>Página de Libro - Bad Bunny</title>
+    <link rel="stylesheet" href="/pagina.css">
 </head>
- <link rel="stylesheet" href="/pagina.css">
+<!-- Formulario emergente -->
+<div id="formulario-modal" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarFormulario()">&times;</span>
+      <h2>Suscríbete a las novedades</h2>
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+  
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+  
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    function abrirFormulario() {
+      document.getElementById("formulario-modal").style.display = "block";
+    }
+  
+    function cerrarFormulario() {
+      document.getElementById("formulario-modal").style.display = "none";
+    }
+  
+    // Cierra el formulario si se hace clic fuera del contenido
+    window.onclick = function(event) {
+      const modal = document.getElementById("formulario-modal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+  
+  
 <body>
     <header>
         <div class="logo">
-            <img src="cone_ros.ico" alt="">
-            <p>BAD<span class="distinto">BUNNY</span>
+            <img src="cone_ros.ico" alt="Logo Bad Bunny" width="50">
+            <p>BAD <span class="distinto">BUNNY</span></p>
         </div>
         <nav class="menu">
             <ul class="nav">
-                <li>Home</li>
-                <li>Nosotros</li>
-                <li>Contacto</li>
-                <li>Proyectos</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
             </ul>
         </nav>
-        <div class="boton">Suscribate</div>
+        <div class="boton" onclick="abrirFormulario()">Suscríbete</div>
     </header>
 
-    <div class="main">
-        <div class="sec1">
-            <div class="frase"></div>
-            <img src="" alt="">
-            <div class="btn-carrito"></div>
-        </div>
-        <div class="sec2">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
+    <main class="main">
+        <section class="sec1">
+            <div class="frase">
+                <h1>"Nunca olvides de dónde vienes"</h1>
+                <p>Explora el mundo musical y personal de Bad Bunny.</p>
+            </div>
+            <img src="badbunny_portada.jpg" alt="Bad Bunny Portada" width="300">
+            <div class="btn-carrito">
+                <button>Agregar al carrito</button>
+            </div>
+        </section>
 
-    <footer></footer>
+        <section class="sec2">
+            <div class="card">Álbum 1</div>
+            <div class="card">Álbum 2</div>
+            <div class="card">Álbum 3</div>
+            <div class="card">Álbum 4</div>
+            <div class="card">Álbum 5</div>
+        </section>
+    </main>
 
+    <footer>
+        <p>&copy; 2025 Página de Libro - Bad Bunny. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
