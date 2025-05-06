@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --oscuro: #3A0519;
+    --medio: #670D2F;
+    --suave: #A53860;
+    --claro: #EF88AD;
+
+}
+
+header{
+    display: flex;
+    width: 100%; /* tamaño de todo el contenido*/
+    background-color: var(--oscuro);
+    justify-content: space-between;
+    align-items: center;
+    
+} 
+.logo{
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    margin: 10px 30px;
+}
+.logo p{
+    font-family: Sagu Exora;
+    font-size: 40px;
+}
+.distinto{
+    color: var(--claro);
+}
+/*_____________________________---*/
+.nav{
+    display: flex;
+    color: white;
+    list-style: none;
+    gap: 30px;
+    font-size: 20px; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+.menu{
+    display: flex;
+    align-items: center;
+}
+.boton{
+    background-color: var(--suave);
+    height:30px;
+    width: 150px;
+    margin: 0 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
