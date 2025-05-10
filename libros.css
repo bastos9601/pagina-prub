@@ -61,139 +61,95 @@ header{
     font-weight: bold;
     font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 5s ease ;
 }
-/* Sección principal */
-.main {
-    padding: 40px;
-    background-color: #fdf3f6;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* animacion del boton en escala*/
+
+
+
+.boton:hover{
+    transform: scale(1.2);
+}
+.nav li:hover{
+    transform: scale(1.2);
+    background-color: var(--medio);
+    height: 40px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px; /*boder redondo al backgroun*/
+    color: var(--claro);
+    
 }
 
-/* Sección 1 - Frase + Imagen + Botón */
-.sec1 {
+/*-------------------------------------------------------*/
+.main{
+    display: flex;
+    width: 95%;
+    margin: 10px auto;
+    justify-content: space-around;
+}
+.sec1{
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.sec1 .frase{
+    font-family: var(--letraesp);
+    font-size: 50px;
+    color: var(--suave);
+}
+
+.sec1 img{
+    width: 350px;
+}
+/* -------------------------------------- */
+
+.sec2{
+    
+    width: 48%;
+}
+.sec2 div{
+    width: 100%;
+    height: 70px;
+    margin: 20px auto;
+}
+/* ------------------------------------- */
+.btn-carrito{
+    width: 80px;
+    background-color: var(--medio);
+    border-radius: 15px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 50px;
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-
-.frase {
-    max-width: 400px;
+.btn-carrito img{
+    width: 50px;
 }
-
-.frase h1 {
-    color: var(--medio);
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-.frase p {
-    font-size: 18px;
-    color: #333;
-}
-
-.sec1 img {
-    width: 250px;
-    border-radius: 15px;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.btn-carrito button {
-    background-color: var(--claro);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    font-size: 16px;
+.btn-carrito p{
+    font-size: 40px;
+    color: var(--claro);
     font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    
 }
+/* --------------------------------- */
 
-.btn-carrito button:hover {
-    background-color: var(--suave);
+.cat{
+    display: flex;
+    flex-direction: column;
 }
-
-/* Sección 2 - Álbumes o Cards */
-.sec2 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+.cat-items{
+    display: flex;
+    justify-content: space-around;
     gap: 20px;
 }
-
-.card {
-    background-color: var(--suave);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    border-radius: 15px;
-    font-weight: bold;
-    font-size: 18px;
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
+.item{
+    width: 50px;
+    height: 70px;
     background-color: var(--medio);
 }
 
-/* Footer */
-footer {
-    background-color: var(--oscuro);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-    font-size: 14px;
-}
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.5);
-}
 
-.modal-contenido {
-    background-color: white;
-    margin: 10% auto;
-    padding: 20px;
-    border-radius: 15px;
-    width: 300px;
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.modal-contenido input {
-    width: 90%;
-    padding: 8px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-}
-
-.modal-contenido button {
-    background-color: var(--suave);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.cerrar {
-    float: right;
-    font-size: 20px;
-    cursor: pointer;
-    color: var(--medio);
-}
